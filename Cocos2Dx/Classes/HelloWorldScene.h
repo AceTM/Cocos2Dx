@@ -19,12 +19,23 @@ private:
     CCSprite *_spacialanomaly;
     CCSprite *_spacialanomaly2;
     
+    CCArray *_asteroids;
+    int _nextAsteroid;
+    float _nextAsteroidSpawn;
     float _shipPointsPerSecY;
+    bool _shipTouched;
     
 public:
     // Method 'init' in cocos2d-x returns bool, instead of 'id' in cocos2d-iphone (an object pointer)
     virtual bool init();
+    virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
     virtual void didAccelerate(CCAcceleration *pAccelerationValue);
+    virtual void ccTouchMoved(CCTouch *touch, CCEvent *event);
+    virtual void ccTouchEnded(CCTouch *touch, CCEvent *event);
+    
+    float randomValueBetween(float low, float high);
+    void setInvisible(CCNode *node);
+    float getTimeTick();
     
     // there's no 'id' in cpp, so we recommend to return the class instance pointer
     static cocos2d::CCScene* scene();
@@ -32,8 +43,7 @@ public:
     // a selector callback
     void menuCloseCallback(CCObject* pSender);
     void update(float dt);
-    void updateKeyboard(CCTime dt);
-    
+
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(HelloWorld);
 };
