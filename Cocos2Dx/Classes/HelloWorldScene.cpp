@@ -24,7 +24,6 @@ bool HelloWorld::init() {
     {
         return false;
     }
-    
     _batchNode = CCSpriteBatchNode::create("Sprites.pvr.ccz");
     this->addChild(_batchNode);
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Sprites.plist");
@@ -32,6 +31,7 @@ bool HelloWorld::init() {
     _ship = CCSprite::createWithSpriteFrameName("SpaceFlier_sm_1.png");
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     _ship->setPosition(ccp(winSize.width * 0.1, winSize.height * 0.5));
+    _ship->setTag(2);
     _batchNode->addChild(_ship, 1);
     
     //1.Create CCParallaxNode
@@ -62,12 +62,13 @@ bool HelloWorld::init() {
     HelloWorld::addChild(CCParticleSystemQuad::create("Stars2.plist"));
     HelloWorld::addChild(CCParticleSystemQuad::create("Stars3.plist"));
     
+    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
+    
     this->scheduleUpdate();
     this->setAccelerometerEnabled(true);
-    
+    this->setTouchEnabled(true);
     return true;
 }
-
 
 void HelloWorld::update(float dt) {
     CCPoint backgroundScrollVert = ccp(-1000, 0);
@@ -129,6 +130,47 @@ void HelloWorld::didAccelerate(CCAcceleration *pAccelerationValue) {
     float accelFraction = accelDiff / KMAXDIFFX;
     _shipPointsPerSecY = KSHIPMAXPOINTPERSEC * accelFraction;
 }
+
+inline CCPoint locationInGLFromTouch(CCTouch &touch) {
+    auto director = CCDirector::sharedDirector();
+    return director -> convertToGL(touch.getLocationInView());
+}
+
+bool HelloWorld::ccTouchBegan(CCTouch *touch, CCEvent *event) {
+    CCLog("Touch begun!");
+    CCPoint touchLoc = this->getParent()->convertTouchToNodeSpace(touch);
+    CCRect spriteRec = _ship->boundingBox();
+    if (spriteRec.containsPoint(touchLoc)) {
+        CCLog("Bravo, touched on sprite %i", _ship->getTag());
+    }
+    //if (CCRect::containsPoint(this->boundingBox(), touchLoc)) {}
+    return true;
+}
+
+//void HelloWorld::ccTouchesBegan(CCSet *touches, CCEvent *event) {
+//    CCLog("Touch begun");
+//}
+
+void HelloWorld::ccTouchMoved(CCTouch *touch, CCEvent *event) {
+    CCLog("Touch moving");
+    
+    CCPoint location = touch->getLocationInView();
+    location = CCDirector::sharedDirector()->convertToGL(location);
+    //auto touch = dynamic_cast<CCTouch *>(*it);
+    CCLog("Location x:%f location y:%f", location.x, location.y);
+}
+
+void HelloWorld::ccTouchEnded(CCTouch *touch, CCEvent *event) {
+    CCLog("Touch ended");
+}
+
+//void HelloWorld::ccTouchCancelled(CCTouch *touch, CCEvent *event) {
+//    for (auto it = touches->begin(); it != touches->end(); it++) {
+//        CCLog("Touch cancelled");
+//    }
+//}
+
+
 
 void HelloWorld::menuCloseCallback(CCObject* pSender) {
     CCDirector::sharedDirector()->end();
