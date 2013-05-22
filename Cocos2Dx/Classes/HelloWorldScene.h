@@ -10,16 +10,21 @@ USING_NS_CC;
 class HelloWorld : public cocos2d::CCLayer, public cocos2d::CCInputListener {
 private:
     CCSpriteBatchNode * _batchNode;
-    CCSprite *_ship;
+    CCSpriteBatchNode * _fighterNode;
+    CCSpriteBatchNode * _bulletNode;
     CCParallaxNodeExtra * _backgroundNode;
+    
+    CCSprite *_ship;
+    CCSprite *_bullet;
+    CCSprite *_shipShadow;
     CCSprite *_spacedust;
     CCSprite *_spacedust2;
     CCSprite *_planetsunrise;
     CCSprite *_galaxy;
     CCSprite *_spacialanomaly;
     CCSprite *_spacialanomaly2;
-    
     CCArray *_asteroids;
+    
     int _nextAsteroid;
     float _nextAsteroidSpawn;
     float _shipPointsPerSecY;
@@ -41,8 +46,9 @@ public:
     static cocos2d::CCScene* scene();
     
     // a selector callback
-    void menuCloseCallback(CCObject* pSender);
+    void menuCloseCallback(CCObject *pSender);
     void update(float dt);
+    void moveBullet(CCSprite *bullet);
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(HelloWorld);
