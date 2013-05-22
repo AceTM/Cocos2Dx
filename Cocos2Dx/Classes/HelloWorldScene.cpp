@@ -25,42 +25,71 @@ bool HelloWorld::init() {
         return false;
     }
     _batchNode = CCSpriteBatchNode::create("Sprites.pvr.ccz");
-    this->addChild(_batchNode);
-    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Sprites.plist");
+    _fighterNode = CCSpriteBatchNode::create("fighter.pvr.ccz");
+    _bulletNode = CCSpriteBatchNode::create("bullet.pvr.ccz");
     
-    _ship = CCSprite::createWithSpriteFrameName("SpaceFlier_sm_1.png");
+    this->addChild(_batchNode);
+    this->addChild(_fighterNode);
+    
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Sprites.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("fighter.plist");
+    CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("bullet.plist");
+    
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    _ship->setPosition(ccp(winSize.width * 0.1, winSize.height * 0.5));
+    _ship = CCSprite::createWithSpriteFrameName("frame_0.gif");
+    _ship->setPosition(ccp(winSize.width * 0.5, winSize.height * 0.1));
     _ship->setTag(2);
-    _batchNode->addChild(_ship, 1);
+    
+    _shipShadow = CCSprite::createWithSpriteFrameName("frame_0.gif");
+    _shipShadow->setPosition(ccp(_ship->getPositionX()-5, _ship->getPositionY()-15));
+    _shipShadow->setColor(ccBLACK);
+    _shipShadow->setOpacity(80);
+    _shipShadow->setTag(1);
+    
+    _fighterNode->addChild(_shipShadow, 1);
+    _fighterNode->addChild(_ship, 1);
     
     //1.Create CCParallaxNode
     _backgroundNode = CCParallaxNodeExtra::node();
     this ->addChild(_backgroundNode, -1);
     
     //2.Create sprites to be added to CCParallaxNode
-    _spacedust = CCSprite::create("bg_front_spacedust.png");
-    _spacedust2 = CCSprite::create("bg_front_spacedust.png");
-    _planetsunrise = CCSprite::create("bg_galaxy.png");
-    _galaxy = CCSprite::create("bg_galaxy.png");
-    _spacialanomaly = CCSprite::create("bg_spacialanomaly.png");
-    _spacialanomaly2 = CCSprite::create("bg_spacialanomaly2.png");
+    _spacedust = CCSprite::create("backgrounddetailed1giant.png");
+    _spacedust2 = CCSprite::create("backgrounddetailed1giant.png");
+//    _planetsunrise = CCSprite::create("bg_galaxy.png");
+//    _galaxy = CCSprite::create("bg_galaxy.png");
+//    _spacialanomaly = CCSprite::create("bg_spacialanomaly.png");
+//    _spacialanomaly2 = CCSprite::create("bg_spacialanomaly2.png");
     
     //3.Determine movement speeds for dusts and background
     CCPoint dustSpeed = ccp(0.1, 0.1);
-    CCPoint bgSpeed = ccp(0.05, 0.05);
+//    CCPoint bgSpeed = ccp(0.05, 0.05);
     
     //4.Add children to CCParallaxNode
-    _backgroundNode->addChild(_spacedust, 0, dustSpeed, ccp(0, winSize.height/2));
-    _backgroundNode->addChild(_spacedust2, 0, dustSpeed, ccp(_spacedust->getContentSize().width, winSize.height/2));
-    _backgroundNode->addChild(_galaxy, -1, bgSpeed, ccp(0, winSize.height * 0.7));
-    _backgroundNode->addChild(_planetsunrise, -1, bgSpeed, ccp(600, winSize.height * 0));
-    _backgroundNode->addChild(_spacialanomaly, -1, bgSpeed, ccp(900, winSize.height * 0.3));
-    _backgroundNode->addChild(_spacialanomaly2, -1, bgSpeed, ccp(1500, winSize.height * 0.9));
+    _backgroundNode->addChild(_spacedust, 0, dustSpeed, ccp(0, -winSize.height));
+    _backgroundNode->addChild(_spacedust2, 0, dustSpeed, ccp(0, -_spacedust->getContentSize().height));
+//    _backgroundNode->addChild(_galaxy, -1, bgSpeed, ccp(0, winSize.height * 0.7));
+//    _backgroundNode->addChild(_planetsunrise, -1, bgSpeed, ccp(600, winSize.height * 0));
+//    _backgroundNode->addChild(_spacialanomaly, -1, bgSpeed, ccp(900, winSize.height * 0.3));
+//    _backgroundNode->addChild(_spacialanomaly2, -1, bgSpeed, ccp(1500, winSize.height * 0.9));
     
-    HelloWorld::addChild(CCParticleSystemQuad::create("Stars1.plist"));
-    HelloWorld::addChild(CCParticleSystemQuad::create("Stars2.plist"));
-    HelloWorld::addChild(CCParticleSystemQuad::create("Stars3.plist"));
+//    HelloWorld::addChild(CCParticleSystemQuad::create("Stars1.plist"));
+//    HelloWorld::addChild(CCParticleSystemQuad::create("Stars2.plist"));
+//    HelloWorld::addChild(CCParticleSystemQuad::create("Stars3.plist"));
+    
+    CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
+    cache->addSpriteFramesWithFile("fighter.plist");
+    
+    CCArray* animFrames = CCArray::createWithCapacity(15);
+    char str[100] = {0};
+    for(int i = 0; i < 4; i++)
+    {
+        sprintf(str, "frame_%0d.gif", i);
+        CCSpriteFrame* frame = cache->spriteFrameByName( str );
+        animFrames->addObject(frame);
+    }
+    CCAnimation* animation = CCAnimation::createWithSpriteFrames(animFrames, 0.1f);
+    _ship->runAction(CCRepeatForever::create(CCAnimate::create(animation)));
     
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
     
@@ -71,7 +100,7 @@ bool HelloWorld::init() {
 }
 
 void HelloWorld::update(float dt) {
-    CCPoint backgroundScrollVert = ccp(-1000, 0);
+    CCPoint backgroundScrollVert = ccp(0, -1000);
     _backgroundNode->setPosition(ccpAdd(_backgroundNode->getPosition(), ccpMult(backgroundScrollVert, dt)));
     
     CCArray *spaceDusts = CCArray::createWithCapacity(2);
@@ -79,26 +108,27 @@ void HelloWorld::update(float dt) {
     spaceDusts->addObject(_spacedust2);
     for (int i = 0; i < spaceDusts->count(); i++) {
         CCSprite *spaceDust = (CCSprite *) (spaceDusts->objectAtIndex(i));
-        float xPosition = _backgroundNode->convertToWorldSpace(spaceDust->getPosition()).x;
-        float size = spaceDust->getContentSize().width;
-        if (xPosition < - size/2) {
-            _backgroundNode->incrementOffset(ccp(spaceDust->getContentSize().width*2, 0), spaceDust);
+        float yPosition = _backgroundNode->convertToWorldSpace(spaceDust->getPosition()).y;
+//        CCLog("Y Position: %f", yPosition);
+        float size = spaceDust->getContentSize().height;
+        if (yPosition < -size/2) {
+            _backgroundNode->incrementOffset(ccp(0, spaceDust->getContentSize().width), spaceDust);
         }
     }
     
-    CCArray *backgrounds = CCArray::createWithCapacity(4);
-    backgrounds->addObject(_galaxy);
-    backgrounds->addObject(_planetsunrise);
-    backgrounds->addObject(_spacialanomaly);
-    backgrounds->addObject(_spacialanomaly2);
-    for (int i = 0; i < backgrounds->count(); i++) {
-        CCSprite *background = (CCSprite *) (backgrounds->objectAtIndex(i));
-        float xPosition = _backgroundNode->convertToWorldSpace(background->getPosition()).x;
-        float size = background->getContentSize().width;
-        if (xPosition < -size) {
-            _backgroundNode->incrementOffset(ccp(2000, 0), background);
-        }
-    }
+//    CCArray *backgrounds = CCArray::createWithCapacity(4);
+//    backgrounds->addObject(_galaxy);
+//    backgrounds->addObject(_planetsunrise);
+//    backgrounds->addObject(_spacialanomaly);
+//    backgrounds->addObject(_spacialanomaly2);
+//    for (int i = 0; i < backgrounds->count(); i++) {
+//        CCSprite *background = (CCSprite *) (backgrounds->objectAtIndex(i));
+//        float yPosition = _backgroundNode->convertToWorldSpace(background->getPosition()).y;
+//        float size = background->getContentSize().height;
+//        if (yPosition < -size) {
+//            _backgroundNode->incrementOffset(ccp(0, 2000), background);
+//        }
+//    }
     
     //Control by tilting, with I haven't a clue
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
@@ -113,10 +143,10 @@ void HelloWorld::update(float dt) {
 
 void HelloWorld::didAccelerate(CCAcceleration *pAccelerationValue) {
     //Tilting control function, no clue here
-#define KFILTERINGFACTOR 0.1
-#define KRESTACCELX -0.6
-#define KSHIPMAXPOINTPERSEC (winSize.height * 0.5)
-#define KMAXDIFFX 0.2
+    #define KFILTERINGFACTOR 0.1
+    #define KRESTACCELX -0.6
+    #define KSHIPMAXPOINTPERSEC (winSize.height * 0.5)
+    #define KMAXDIFFX 0.2
     
     double rollingX;
     
@@ -142,8 +172,20 @@ bool HelloWorld::ccTouchBegan(CCTouch *touch, CCEvent *event) {
     CCRect spriteRec = _ship->boundingBox();
     if (spriteRec.containsPoint(touchLoc)) {
         CCLog("Bravo, touched on sprite %i", _ship->getTag());
+        _shipTouched = true;
     }
-    //if (CCRect::containsPoint(this->boundingBox(), touchLoc)) {}
+    else {
+//        CCMoveTo *moveShip = CCMoveTo::create(0.2f, ccp(touchLoc.x, touchLoc.y));
+//        _ship->runAction(moveShip);
+        
+//        ccBezierConfig bezier;
+//        bezier.controlPoint_1 = ccp(_ship->getPositionX(), _ship->getPositionY()+20);
+//        bezier.controlPoint_2 = ccp(_ship->getPositionX()-30, _ship->getPositionY()+90);
+//        bezier.endPosition = ccp(touchLoc.x, touchLoc.y);
+//        
+//        CCBezierTo *bezierTo = CCBezierTo::create(2, bezier);
+//        _ship->runAction(bezierTo);
+    }
     return true;
 }
 
@@ -158,10 +200,51 @@ void HelloWorld::ccTouchMoved(CCTouch *touch, CCEvent *event) {
     location = CCDirector::sharedDirector()->convertToGL(location);
     //auto touch = dynamic_cast<CCTouch *>(*it);
     CCLog("Location x:%f location y:%f", location.x, location.y);
+    if (_shipTouched == true) {
+        _ship->cocos2d::CCNode::setPosition(location.x, location.y);
+        _shipShadow->setPosition(ccp(_ship->getPositionX()-5, _ship->getPositionY()-15));
+    }
+    else {
+//        CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+        _bullet = CCSprite::create("Bullet.png");
+        _bullet->setScale(0.3f);
+        _bullet->setPosition(ccp(_ship->getPositionX(),_ship->getPositionY()+25));
+        
+//        int offX = location.x-projectile->getPosition().x;
+//        int offY = location.y-projectile->getPosition().y;
+//        
+//        if(offX<=0) return;
+        
+        this->addChild(_bullet);
+        
+//        int realX = location.x + (projectile->getContentSize().width/2);
+//        float ratio = (float) offX/(float) offY;
+//        int realY = location.y;
+        
+        CCPoint realdest =  ccp(_ship->getPositionX(), _ship->getPositionY()+500);
+        CCPoint bulletPos = _bullet->getPosition();
+        int offRealX = realdest.x - _bullet->getPosition().x;
+        int offRealY = realdest.y - _bullet->getPosition().y;
+        
+        float length = sqrtf((offRealX*offRealX)+(offRealY*offRealY));
+        float velocity = 460/1;
+        
+        float realMoveDuration = length/velocity;
+        
+        CCActionInterval *actionMove = CCMoveTo::create(realMoveDuration, realdest);
+        CCAction *actionRemove = CCRemoveSelf::create();
+        CCFiniteTimeAction *timeAction = CCSequence::create(actionMove, actionRemove, NULL);
+        // *delay = CCDelayTime::create(1.2f);
+        _bullet->runAction(timeAction);
+
+    }
 }
 
 void HelloWorld::ccTouchEnded(CCTouch *touch, CCEvent *event) {
     CCLog("Touch ended");
+    if (_shipTouched == true) {
+        _shipTouched = false;
+    }
 }
 
 //void HelloWorld::ccTouchCancelled(CCTouch *touch, CCEvent *event) {
@@ -169,8 +252,6 @@ void HelloWorld::ccTouchEnded(CCTouch *touch, CCEvent *event) {
 //        CCLog("Touch cancelled");
 //    }
 //}
-
-
 
 void HelloWorld::menuCloseCallback(CCObject* pSender) {
     CCDirector::sharedDirector()->end();
