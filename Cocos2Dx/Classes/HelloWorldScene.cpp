@@ -13,7 +13,6 @@ CCScene* HelloWorld::scene() {
     return scene;
 }
 
-// on "init" you need to initialize your instance
 bool HelloWorld::init() {
     if (!CCLayer::init())return false;
     _evilDoers = new CCArray;
@@ -21,19 +20,21 @@ bool HelloWorld::init() {
     
     _batchNode = CCSpriteBatchNode::create("Sprites.pvr.ccz");
     _fighterNode = CCSpriteBatchNode::create("fighter.pvr.ccz");
-    
     this->addChild(_batchNode);
     this->addChild(_fighterNode);
+    
+    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+    
+    CCSprite *menuSprite = CCSprite::create("ShooterMenu.png");
+    menuSprite->setPosition(ccp(winSize.width * 0.5, 25));
     
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("Sprites.plist");
     CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("fighter.plist");
     
-    CCSize winSize = CCDirector::sharedDirector()->getWinSize();
-    CCLog("Win Size - x: %f, y: %f", winSize.width, winSize.height);
+    
     _ship = CCSprite::create();
-    _ship->setPosition(ccp(winSize.width * 0.5, winSize.height * 0.1));
+    _ship->setPosition(ccp(winSize.width * 0.5, winSize.height * 0.3));
     _ship->setTag(5);
-    this->addChild(_ship, 1);
     
     _shipShadow = CCSprite::createWithSpriteFrameName("frame_0.gif");
     _shipShadow->setPosition(ccp(_ship->getPositionX()-5, _ship->getPositionY()-25));
@@ -43,22 +44,16 @@ bool HelloWorld::init() {
     _fighterNode->addChild(_shipShadow, 1);
     //_fighterNode->addChild(_ship, 1);
     
-    //1.Create CCParallaxNode
     _backgroundNode = CCParallaxNodeExtra::node();
-    this ->addChild(_backgroundNode, -1);
     
-    //2.Create sprites to be added to CCParallaxNode
     _spacedust = CCSprite::create("netBackground2.png");
     _spacedust2 = CCSprite::create("netBackground2.png");
     
-    //3.Determine movement speeds for dusts and background
     CCPoint dustSpeed = ccp(0.3, 0.3);
     
-    //4.Add children to CCParallaxNode
     _backgroundNode->addChild(_spacedust, 0, dustSpeed, ccp(winSize.width/2, -winSize.height));
     //_backgroundNode->addChild(_spacedust2, 0, dustSpeed, ccp(0, -_spacedust->getContentSize().height/1.5));
     
-    //Player animations
     CCSpriteFrameCache* cache = CCSpriteFrameCache::sharedSpriteFrameCache();
     cache->addSpriteFramesWithFile("fighter.plist");
     CCArray* animFrames = CCArray::createWithCapacity(15);
@@ -73,6 +68,10 @@ bool HelloWorld::init() {
     
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
     HelloWorld::enemyAppears();
+    
+    this->addChild(_backgroundNode, -1);
+    this->addChild(_ship, 1);
+    this->addChild(menuSprite, 5);
     this->scheduleUpdate();
     this->setAccelerometerEnabled(true);
     this->setTouchEnabled(true);
@@ -150,13 +149,13 @@ void HelloWorld::update(float dt) {
                         CCSpriteFrameCache* expCache = CCSpriteFrameCache::sharedSpriteFrameCache();
                         expCache->addSpriteFramesWithFile("explosion2.plist");
                         char str2[100] = {0};
-                        CCArray* expFrames = CCArray::createWithCapacity(18);
+                        CCArray* expFrames = CCArray::createWithCapacity(19);
                         for(int i = 0; i < 19; i++) {
-                            sprintf(str2, "explosion2_%0d.gif", i);
+                            sprintf(str2, "explosion2_%d.gif", i);
                             CCSpriteFrame* expFrame = expCache->spriteFrameByName(str2);
                             expFrames->addObject(expFrame);
                         }
-                        CCAnimation* expAnimation = CCAnimation::createWithSpriteFrames(expFrames, 0.1f);
+                        CCAnimation* expAnimation = CCAnimation::createWithSpriteFrames(expFrames, 0.08f);
                         CCRemoveSelf *removeExplosion = CCRemoveSelf::create();
                         CCSequence *explosionAnim = CCSequence::createWithTwoActions(CCAnimate::create(expAnimation), removeExplosion);
                         explosion->runAction(explosionAnim);
@@ -183,11 +182,7 @@ void HelloWorld::update(float dt) {
         }
         bulletsToDelete->release();
     }
-    else {
-        
-    }
-    
-    if (_ship->getPositionY() > 430)_ship->setPositionY(_ship->getPositionY());
+    if (_ship->getPositionY() < 70)_ship->setPositionY(71);
 }
 
 inline CCPoint locationInGLFromTouch(CCTouch &touch) {
@@ -212,7 +207,7 @@ void HelloWorld::ccTouchMoved(CCTouch *touch, CCEvent *event) {
     CCPoint location = touch->getLocationInView();
     location = CCDirector::sharedDirector()->convertToGL(location);
     //CCLog("Location x:%f location y:%f", location.x, location.y);
-    if (_shipTouched == true) {
+    if (_shipTouched == true && _ship->getPositionY() > 70) {
         _ship->cocos2d::CCNode::setPosition(location.x, location.y);
         _shipShadow->setPosition(ccp(_ship->getPositionX()-5, _ship->getPositionY()-25));
     }
