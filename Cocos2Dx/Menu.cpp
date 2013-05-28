@@ -37,8 +37,8 @@ bool Menu::init() {
     background = CCSprite::create("Background 320x480.png");
     button1 = CCSprite::create("Button1.png");
     button2 = CCSprite::create("Button2.png");
-    button3 = CCSprite::create("Button3.png");
-    button4 = CCSprite::create("Button4On.png");
+    button3 = CCSprite::create("Button4On.png");
+    button4 = CCSprite::create("Button4.png");
     
     background->setPosition(ccp(winSize.width/2, winSize.height/2));
     button1->setPosition(ccp(winSize.width/2, 350));
