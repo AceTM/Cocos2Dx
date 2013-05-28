@@ -1,13 +1,13 @@
 //
-//  Menu.h
+//  RPGTileMap.h
 //  Cocos2Dx
 //
-//  Created by MinhNT on 13/05/22.
+//  Created by MinhNT on 13/05/28.
 //
 //
 
-#ifndef __Cocos2Dx__Menu__
-#define __Cocos2Dx__Menu__
+#ifndef __Cocos2Dx__RPGTileMap__
+#define __Cocos2Dx__RPGTileMap__
 
 #include <iostream>
 #include "cocos2d.h"
@@ -16,24 +16,20 @@
 
 USING_NS_CC;
 
-class Menu : public CCLayer, public CCInputListener {
+class TileMap : public CCLayer, public CCInputListener {
 private:
-    CCSprite *background;
-    CCSprite *button1;
-    CCSprite *button2;
-    CCSprite *button3;
-    CCSprite *button4;
-    CCTouchDelegate *menuTouchDelegate;
+    CCTMXTiledMap *tileMap;
 public:
     virtual bool init();
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
     virtual void ccTouchEnded(CCTouch *touch, CCEvent *event);
+    
     //Selector callback
     void update(float dt);
     void menuCloseCallback(CCObject *pSender);
     
     static CCScene* scene();
-    CREATE_FUNC(Menu);
+    CREATE_FUNC(TileMap);
 };
 
-#endif /* defined(__Cocos2Dx__Menu__) */
+#endif /* defined(__Cocos2Dx__RPGTileMap__) */
