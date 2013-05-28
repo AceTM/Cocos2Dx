@@ -23,7 +23,7 @@ private:
     CCSprite *button2;
     CCSprite *button3;
     CCSprite *button4;
-
+    CCTouchDelegate *menuTouchDelegate;
 public:
     virtual bool init();
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);

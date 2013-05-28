@@ -9,6 +9,8 @@
 #include "Menu.h"
 #include "SimpleAudioEngine.h"
 #include "HelloWorldScene.h"
+#include "Box2DImport.h"
+#include "RPGTileMap.h"
 
 using namespace cocos2d;
 using namespace CocosDenshion;
@@ -36,7 +38,7 @@ bool Menu::init() {
     button1 = CCSprite::create("Button1.png");
     button2 = CCSprite::create("Button2.png");
     button3 = CCSprite::create("Button3.png");
-    button4 = CCSprite::create("Button4.png");
+    button4 = CCSprite::create("Button4On.png");
     
     background->setPosition(ccp(winSize.width/2, winSize.height/2));
     button1->setPosition(ccp(winSize.width/2, 350));
@@ -68,17 +70,31 @@ bool Menu::ccTouchBegan(CCTouch *touch, CCEvent *event) {
 }
 
 void Menu::ccTouchEnded(CCTouch *touch, CCEvent *event) {
-    CCLog("Touch begun!");
+    CCLog("Touch belong to Menu");
     CCPoint touchLoc = this->getParent()->convertTouchToNodeSpace(touch);
     CCRect spriteRec = button1->boundingBox();
+    CCRect boxRec = button2->boundingBox();
+    CCRect tileRec = button3->boundingBox();
     if (spriteRec.containsPoint(touchLoc)) {
         CCScene *shooterScene = HelloWorld::scene();
         CCDirector::sharedDirector()->setDepthTest(true);
         CCTransitionScene *transition = CCTransitionFadeUp::create(1, shooterScene);
         CCDirector::sharedDirector()->replaceScene(transition);
+
     }
-    else {
-        
+    if (boxRec.containsPoint(touchLoc)) {
+        CCScene *box2D = Box2DImport::scene();
+        CCDirector::sharedDirector()->setDepthTest(true);
+        CCTransitionScene *transition = CCTransitionFadeUp::create(1, box2D);
+        CCDirector::sharedDirector()->replaceScene(transition);
+        CCDirector::sharedDirector()->getTouchDispatcher()->removeDelegate(this);
+    }
+    if (tileRec.containsPoint(touchLoc)) {
+        CCScene *tileScene = TileMap::scene();
+        CCDirector::sharedDirector()->setDepthTest(true);
+        CCTransitionScene *transition = CCTransitionFadeUp::create(1, tileScene);
+        CCDirector::sharedDirector()->replaceScene(transition);
+        CCDirector::sharedDirector()->getTouchDispatcher()->removeDelegate(this);
     }
 }
 

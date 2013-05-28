@@ -13,7 +13,6 @@ CCScene* HelloWorld::scene() {
     return scene;
 }
 
-// on "init" you need to initialize your instance
 bool HelloWorld::init() {
     if (!CCLayer::init())return false;
     _evilDoers = new CCArray;
@@ -150,13 +149,13 @@ void HelloWorld::update(float dt) {
                         CCSpriteFrameCache* expCache = CCSpriteFrameCache::sharedSpriteFrameCache();
                         expCache->addSpriteFramesWithFile("explosion2.plist");
                         char str2[100] = {0};
-                        CCArray* expFrames = CCArray::createWithCapacity(18);
+                        CCArray* expFrames = CCArray::createWithCapacity(19);
                         for(int i = 0; i < 19; i++) {
-                            sprintf(str2, "explosion2_%0d.gif", i);
+                            sprintf(str2, "explosion2_%d.gif", i);
                             CCSpriteFrame* expFrame = expCache->spriteFrameByName(str2);
                             expFrames->addObject(expFrame);
                         }
-                        CCAnimation* expAnimation = CCAnimation::createWithSpriteFrames(expFrames, 0.1f);
+                        CCAnimation* expAnimation = CCAnimation::createWithSpriteFrames(expFrames, 0.08f);
                         CCRemoveSelf *removeExplosion = CCRemoveSelf::create();
                         CCSequence *explosionAnim = CCSequence::createWithTwoActions(CCAnimate::create(expAnimation), removeExplosion);
                         explosion->runAction(explosionAnim);
@@ -183,10 +182,6 @@ void HelloWorld::update(float dt) {
         }
         bulletsToDelete->release();
     }
-    else {
-        
-    }
-    
     if (_ship->getPositionY() < 70)_ship->setPositionY(71);
 }
 

@@ -1,28 +1,25 @@
 //
-//  Box2DTrial.h
+//  RPGTileMap.h
 //  Cocos2Dx
 //
-//  Created by MinhNT on 13/05/24.
+//  Created by MinhNT on 13/05/28.
 //
 //
 
-#ifndef __Cocos2Dx__Box2DTrial__
-#define __Cocos2Dx__Box2DTrial__
+#ifndef __Cocos2Dx__RPGTileMap__
+#define __Cocos2Dx__RPGTileMap__
 
 #include <iostream>
 #include "cocos2d.h"
+#include "CCParallaxNodeExtra.h"
 #include "CCInputListener.h"
-#include "Box2D.h"
 
 USING_NS_CC;
 
-class Box2DTrial: public CCLayer {
+class TileMap : public CCLayer, public CCInputListener {
 private:
-    b2Body *paddleBody;
-    b2World *world;
+    CCTMXTiledMap *tileMap;
 public:
-    static CCScene* scene();
-    
     virtual bool init();
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
     virtual void ccTouchEnded(CCTouch *touch, CCEvent *event);
@@ -31,7 +28,8 @@ public:
     void update(float dt);
     void menuCloseCallback(CCObject *pSender);
     
-    CREATE_FUNC(Box2DTrial);
+    static CCScene* scene();
+    CREATE_FUNC(TileMap);
 };
 
-#endif /* defined(__Cocos2Dx__Box2DTrial__) */
+#endif /* defined(__Cocos2Dx__RPGTileMap__) */

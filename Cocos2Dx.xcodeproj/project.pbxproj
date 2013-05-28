@@ -279,6 +279,9 @@
 		DC46AE04174B705200B2CE40 /* backgrounddetailed4.png in Resources */ = {isa = PBXBuildFile; fileRef = DC46AE01174B705200B2CE40 /* backgrounddetailed4.png */; };
 		DC46AE06174B76F700B2CE40 /* backgrounddetailed1giant.png in Resources */ = {isa = PBXBuildFile; fileRef = DC46AE05174B76F700B2CE40 /* backgrounddetailed1giant.png */; };
 		DC46AE08174B8B4600B2CE40 /* Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = DC46AE07174B8B4600B2CE40 /* Bullet.png */; };
+		DC5FE5A2174F6A000068784E /* Missile.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE59F174F6A000068784E /* Missile.png */; };
+		DC5FE5A3174F6A000068784E /* Missile1.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE5A0174F6A000068784E /* Missile1.png */; };
+		DC5FE5A4174F6A000068784E /* Missile2.png in Resources */ = {isa = PBXBuildFile; fileRef = DC5FE5A1174F6A000068784E /* Missile2.png */; };
 		DC7CE719174CB2D200FCC9F7 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC7CE717174CB2D200FCC9F7 /* Menu.cpp */; };
 		DC7CE720174CBA5700FCC9F7 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE71B174CBA5700FCC9F7 /* Background.png */; };
 		DC7CE721174CBA5700FCC9F7 /* Button1.png in Resources */ = {isa = PBXBuildFile; fileRef = DC7CE71C174CBA5700FCC9F7 /* Button1.png */; };
@@ -292,7 +295,6 @@
 		DCA37BD7174E03AE0089D00A /* explosion2.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA37BD5174E03AE0089D00A /* explosion2.plist */; };
 		DCA37BD8174E03AE0089D00A /* explosion2.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCA37BD6174E03AE0089D00A /* explosion2.pvr.ccz */; };
 		DCAB28A4174F0777008CA814 /* ShooterMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = DCAB28A3174F0777008CA814 /* ShooterMenu.png */; };
-		DCAB2CF9174F1D14008CA814 /* Box2DTrial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2CF7174F1D13008CA814 /* Box2DTrial.cpp */; };
 		DCAB2DED174F1EC9008CA814 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2D94174F1EC9008CA814 /* b2BroadPhase.cpp */; };
 		DCAB2DEE174F1EC9008CA814 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2D96174F1EC9008CA814 /* b2CollideCircle.cpp */; };
 		DCAB2DEF174F1EC9008CA814 /* b2CollidePolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2D97174F1EC9008CA814 /* b2CollidePolygon.cpp */; };
@@ -328,6 +330,9 @@
 		DCAB2E0D174F1EC9008CA814 /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2DDA174F1EC9008CA814 /* b2PulleyJoint.cpp */; };
 		DCAB2E0E174F1EC9008CA814 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2DDC174F1EC9008CA814 /* b2RevoluteJoint.cpp */; };
 		DCAB2E0F174F1EC9008CA814 /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCAB2DDE174F1EC9008CA814 /* b2WeldJoint.cpp */; };
+		DCAB2E1B174F4184008CA814 /* bowling_ball_Vector_Clipart.png in Resources */ = {isa = PBXBuildFile; fileRef = DCAB2E1A174F4184008CA814 /* bowling_ball_Vector_Clipart.png */; };
+		DCAB2E1E174F4D4F008CA814 /* explosionx.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCAB2E1C174F4D4F008CA814 /* explosionx.plist */; };
+		DCAB2E1F174F4D4F008CA814 /* explosionx.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCAB2E1D174F4D4F008CA814 /* explosionx.pvr.ccz */; };
 		DCC1667217463314001DDBDA /* CCParallaxNodeExtra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC1667017463314001DDBDA /* CCParallaxNodeExtra.cpp */; };
 		DCC1668A174635A7001DDBDA /* CCInputDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC1667B174635A7001DDBDA /* CCInputDispatcher.cpp */; };
 		DCC1668B174635A7001DDBDA /* CCInputEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCC1667D174635A7001DDBDA /* CCInputEvent.cpp */; };
@@ -352,6 +357,17 @@
 		DCC166C217463A4D001DDBDA /* Sprites.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCC166AF17463A4D001DDBDA /* Sprites.pvr.ccz */; };
 		DCD45571174DE788001A7DD6 /* hit.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD4556F174DE788001A7DD6 /* hit.plist */; };
 		DCD45572174DE788001A7DD6 /* hit.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCD45570174DE788001A7DD6 /* hit.pvr.ccz */; };
+		DCF4CF9C175445BB00516FB1 /* Box2DWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4CF9A175445BB00516FB1 /* Box2DWorld.cpp */; };
+		DCF4CF9F1754496D00516FB1 /* Box2DImport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4CF9D1754496D00516FB1 /* Box2DImport.cpp */; };
+		DCF4CFA417544E9200516FB1 /* baseSprite.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFA117544E9200516FB1 /* baseSprite.plist */; };
+		DCF4CFA517544E9200516FB1 /* baseSprite.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFA217544E9200516FB1 /* baseSprite.pvr.ccz */; };
+		DCF4CFA617544E9200516FB1 /* BG_1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFA317544E9200516FB1 /* BG_1.png */; };
+		DCF4CFA817544EDD00516FB1 /* angrybirds.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFA717544EDD00516FB1 /* angrybirds.png */; };
+		DCF4CFAD17548BCF00516FB1 /* Gogo.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFAB17548BCF00516FB1 /* Gogo.tmx */; };
+		DCF4CFAE17548BCF00516FB1 /* Grass.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFAC17548BCF00516FB1 /* Grass.tmx */; };
+		DCF4CFB117548CDF00516FB1 /* RPGTileMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4CFAF17548CDF00516FB1 /* RPGTileMap.cpp */; };
+		DCF4CFF71754947F00516FB1 /* Full.tmx in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFF61754947F00516FB1 /* Full.tmx */; };
+		DCF4D00A17549E2000516FB1 /* Button4On.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF4D00917549E2000516FB1 /* Button4On.png */; };
 		DCF5F1B5174F001C00765B52 /* Background 320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5F1B4174F001C00765B52 /* Background 320x480.png */; };
 /* End PBXBuildFile section */
 
@@ -933,6 +949,9 @@
 		DC46AE01174B705200B2CE40 /* backgrounddetailed4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgrounddetailed4.png; sourceTree = "<group>"; };
 		DC46AE05174B76F700B2CE40 /* backgrounddetailed1giant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgrounddetailed1giant.png; sourceTree = "<group>"; };
 		DC46AE07174B8B4600B2CE40 /* Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bullet.png; sourceTree = "<group>"; };
+		DC5FE59F174F6A000068784E /* Missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Missile.png; sourceTree = "<group>"; };
+		DC5FE5A0174F6A000068784E /* Missile1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Missile1.png; sourceTree = "<group>"; };
+		DC5FE5A1174F6A000068784E /* Missile2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Missile2.png; sourceTree = "<group>"; };
 		DC7CE717174CB2D200FCC9F7 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
 		DC7CE718174CB2D200FCC9F7 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		DC7CE71B174CBA5700FCC9F7 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
@@ -947,8 +966,6 @@
 		DCA37BD5174E03AE0089D00A /* explosion2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = explosion2.plist; sourceTree = "<group>"; };
 		DCA37BD6174E03AE0089D00A /* explosion2.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion2.pvr.ccz; sourceTree = "<group>"; };
 		DCAB28A3174F0777008CA814 /* ShooterMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShooterMenu.png; sourceTree = "<group>"; };
-		DCAB2CF7174F1D13008CA814 /* Box2DTrial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box2DTrial.cpp; sourceTree = "<group>"; };
-		DCAB2CF8174F1D13008CA814 /* Box2DTrial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2DTrial.h; sourceTree = "<group>"; };
 		DCAB2D92174F1EC9008CA814 /* Box2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2D.h; sourceTree = "<group>"; };
 		DCAB2D94174F1EC9008CA814 /* b2BroadPhase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2BroadPhase.cpp; sourceTree = "<group>"; };
 		DCAB2D95174F1EC9008CA814 /* b2BroadPhase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2BroadPhase.h; sourceTree = "<group>"; };
@@ -1021,6 +1038,9 @@
 		DCAB2DDD174F1EC9008CA814 /* b2RevoluteJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2RevoluteJoint.h; sourceTree = "<group>"; };
 		DCAB2DDE174F1EC9008CA814 /* b2WeldJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2WeldJoint.cpp; sourceTree = "<group>"; };
 		DCAB2DDF174F1EC9008CA814 /* b2WeldJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2WeldJoint.h; sourceTree = "<group>"; };
+		DCAB2E1A174F4184008CA814 /* bowling_ball_Vector_Clipart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bowling_ball_Vector_Clipart.png; sourceTree = "<group>"; };
+		DCAB2E1C174F4D4F008CA814 /* explosionx.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = explosionx.plist; sourceTree = "<group>"; };
+		DCAB2E1D174F4D4F008CA814 /* explosionx.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosionx.pvr.ccz; sourceTree = "<group>"; };
 		DCC1667017463314001DDBDA /* CCParallaxNodeExtra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCParallaxNodeExtra.cpp; sourceTree = "<group>"; };
 		DCC1667117463314001DDBDA /* CCParallaxNodeExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCParallaxNodeExtra.h; sourceTree = "<group>"; };
 		DCC1667B174635A7001DDBDA /* CCInputDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCInputDispatcher.cpp; sourceTree = "<group>"; };
@@ -1050,6 +1070,20 @@
 		DCC166AF17463A4D001DDBDA /* Sprites.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sprites.pvr.ccz; sourceTree = "<group>"; };
 		DCD4556F174DE788001A7DD6 /* hit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hit.plist; sourceTree = "<group>"; };
 		DCD45570174DE788001A7DD6 /* hit.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = hit.pvr.ccz; sourceTree = "<group>"; };
+		DCF4CF9A175445BB00516FB1 /* Box2DWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box2DWorld.cpp; sourceTree = "<group>"; };
+		DCF4CF9B175445BB00516FB1 /* Box2DWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2DWorld.h; sourceTree = "<group>"; };
+		DCF4CF9D1754496D00516FB1 /* Box2DImport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box2DImport.cpp; sourceTree = "<group>"; };
+		DCF4CF9E1754496D00516FB1 /* Box2DImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2DImport.h; sourceTree = "<group>"; };
+		DCF4CFA117544E9200516FB1 /* baseSprite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = baseSprite.plist; sourceTree = "<group>"; };
+		DCF4CFA217544E9200516FB1 /* baseSprite.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = baseSprite.pvr.ccz; sourceTree = "<group>"; };
+		DCF4CFA317544E9200516FB1 /* BG_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG_1.png; sourceTree = "<group>"; };
+		DCF4CFA717544EDD00516FB1 /* angrybirds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angrybirds.png; sourceTree = "<group>"; };
+		DCF4CFAB17548BCF00516FB1 /* Gogo.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Gogo.tmx; sourceTree = "<group>"; };
+		DCF4CFAC17548BCF00516FB1 /* Grass.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Grass.tmx; sourceTree = "<group>"; };
+		DCF4CFAF17548CDF00516FB1 /* RPGTileMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RPGTileMap.cpp; sourceTree = "<group>"; };
+		DCF4CFB017548CDF00516FB1 /* RPGTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPGTileMap.h; sourceTree = "<group>"; };
+		DCF4CFF61754947F00516FB1 /* Full.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Full.tmx; path = Tiles/Full.tmx; sourceTree = "<group>"; };
+		DCF4D00917549E2000516FB1 /* Button4On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Button4On.png; sourceTree = "<group>"; };
 		DCF5F1B4174F001C00765B52 /* Background 320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background 320x480.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1122,6 +1156,10 @@
 		DC12FB781744D21400480D31 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DCF4CFA917548BCF00516FB1 /* Tilesets */,
+				DCF4CFA017544E9200516FB1 /* Import */,
+				DC5FE59D174F69FF0068784E /* Items */,
+				DCAB2E19174F4184008CA814 /* Shapes */,
 				DC7CE71A174CBA5700FCC9F7 /* Interface */,
 				DC46ADEA174B606700B2CE40 /* Packed */,
 				DCC1669817463A4D001DDBDA /* Backgrounds */,
@@ -1183,6 +1221,8 @@
 				DC12FBD61744D21700480D31 /* CCScheduler.cpp */,
 				DC12FBD81744D21700480D31 /* CCScheduler.h */,
 				DC12FBFC1744D21900480D31 /* cocos2d.cpp */,
+				DCC1667017463314001DDBDA /* CCParallaxNodeExtra.cpp */,
+				DCC1667117463314001DDBDA /* CCParallaxNodeExtra.h */,
 				DC12FB9B1744D21400480D31 /* actions */,
 				DC12FBC31744D21600480D31 /* base_nodes */,
 				DC12FBD91744D21700480D31 /* cocoa */,
@@ -2207,16 +2247,18 @@
 		DC12FED91744D22E00480D31 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DCF4CF9D1754496D00516FB1 /* Box2DImport.cpp */,
+				DCF4CF9E1754496D00516FB1 /* Box2DImport.h */,
 				DC12FEDA1744D22E00480D31 /* AppDelegate.h */,
 				DC12FEDB1744D22E00480D31 /* AppDelegate.cpp */,
 				DC12FEDD1744D22E00480D31 /* HelloWorldScene.h */,
 				DC12FEDE1744D22E00480D31 /* HelloWorldScene.cpp */,
-				DCC1667017463314001DDBDA /* CCParallaxNodeExtra.cpp */,
-				DCC1667117463314001DDBDA /* CCParallaxNodeExtra.h */,
 				DC7CE717174CB2D200FCC9F7 /* Menu.cpp */,
 				DC7CE718174CB2D200FCC9F7 /* Menu.h */,
-				DCAB2CF7174F1D13008CA814 /* Box2DTrial.cpp */,
-				DCAB2CF8174F1D13008CA814 /* Box2DTrial.h */,
+				DCF4CF9A175445BB00516FB1 /* Box2DWorld.cpp */,
+				DCF4CF9B175445BB00516FB1 /* Box2DWorld.h */,
+				DCF4CFAF17548CDF00516FB1 /* RPGTileMap.cpp */,
+				DCF4CFB017548CDF00516FB1 /* RPGTileMap.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2224,6 +2266,8 @@
 		DC46ADEA174B606700B2CE40 /* Packed */ = {
 			isa = PBXGroup;
 			children = (
+				DCAB2E1C174F4D4F008CA814 /* explosionx.plist */,
+				DCAB2E1D174F4D4F008CA814 /* explosionx.pvr.ccz */,
 				DCA37BD5174E03AE0089D00A /* explosion2.plist */,
 				DCA37BD6174E03AE0089D00A /* explosion2.pvr.ccz */,
 				DCD4556F174DE788001A7DD6 /* hit.plist */,
@@ -2240,9 +2284,29 @@
 			path = Packed;
 			sourceTree = "<group>";
 		};
+		DC5FE59D174F69FF0068784E /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				DC5FE59E174F6A000068784E /* Missiles */,
+			);
+			name = Items;
+			path = Resources/Items;
+			sourceTree = "<group>";
+		};
+		DC5FE59E174F6A000068784E /* Missiles */ = {
+			isa = PBXGroup;
+			children = (
+				DC5FE59F174F6A000068784E /* Missile.png */,
+				DC5FE5A0174F6A000068784E /* Missile1.png */,
+				DC5FE5A1174F6A000068784E /* Missile2.png */,
+			);
+			path = Missiles;
+			sourceTree = "<group>";
+		};
 		DC7CE71A174CBA5700FCC9F7 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				DCF4D00917549E2000516FB1 /* Button4On.png */,
 				DCAB28A3174F0777008CA814 /* ShooterMenu.png */,
 				DC7CE71B174CBA5700FCC9F7 /* Background.png */,
 				DC7CE71C174CBA5700FCC9F7 /* Button1.png */,
@@ -2381,6 +2445,14 @@
 			path = Joints;
 			sourceTree = "<group>";
 		};
+		DCAB2E19174F4184008CA814 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				DCAB2E1A174F4184008CA814 /* bowling_ball_Vector_Clipart.png */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 		DCC1667517463591001DDBDA /* Darkfall */ = {
 			isa = PBXGroup;
 			children = (
@@ -2459,6 +2531,27 @@
 			);
 			name = Spritesheets;
 			path = Resources/Spritesheets;
+			sourceTree = "<group>";
+		};
+		DCF4CFA017544E9200516FB1 /* Import */ = {
+			isa = PBXGroup;
+			children = (
+				DCF4CFA717544EDD00516FB1 /* angrybirds.png */,
+				DCF4CFA117544E9200516FB1 /* baseSprite.plist */,
+				DCF4CFA217544E9200516FB1 /* baseSprite.pvr.ccz */,
+				DCF4CFA317544E9200516FB1 /* BG_1.png */,
+			);
+			path = Import;
+			sourceTree = "<group>";
+		};
+		DCF4CFA917548BCF00516FB1 /* Tilesets */ = {
+			isa = PBXGroup;
+			children = (
+				DCF4CFF61754947F00516FB1 /* Full.tmx */,
+				DCF4CFAB17548BCF00516FB1 /* Gogo.tmx */,
+				DCF4CFAC17548BCF00516FB1 /* Grass.tmx */,
+			);
+			path = Tilesets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2570,6 +2663,20 @@
 				DCA37BD8174E03AE0089D00A /* explosion2.pvr.ccz in Resources */,
 				DCF5F1B5174F001C00765B52 /* Background 320x480.png in Resources */,
 				DCAB28A4174F0777008CA814 /* ShooterMenu.png in Resources */,
+				DCAB2E1B174F4184008CA814 /* bowling_ball_Vector_Clipart.png in Resources */,
+				DCAB2E1E174F4D4F008CA814 /* explosionx.plist in Resources */,
+				DCAB2E1F174F4D4F008CA814 /* explosionx.pvr.ccz in Resources */,
+				DC5FE5A2174F6A000068784E /* Missile.png in Resources */,
+				DC5FE5A3174F6A000068784E /* Missile1.png in Resources */,
+				DC5FE5A4174F6A000068784E /* Missile2.png in Resources */,
+				DCF4CFA417544E9200516FB1 /* baseSprite.plist in Resources */,
+				DCF4CFA517544E9200516FB1 /* baseSprite.pvr.ccz in Resources */,
+				DCF4CFA617544E9200516FB1 /* BG_1.png in Resources */,
+				DCF4CFA817544EDD00516FB1 /* angrybirds.png in Resources */,
+				DCF4CFAD17548BCF00516FB1 /* Gogo.tmx in Resources */,
+				DCF4CFAE17548BCF00516FB1 /* Grass.tmx in Resources */,
+				DCF4CFF71754947F00516FB1 /* Full.tmx in Resources */,
+				DCF4D00A17549E2000516FB1 /* Button4On.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2821,7 +2928,6 @@
 				DCC1668A174635A7001DDBDA /* CCInputDispatcher.cpp in Sources */,
 				DCC1668B174635A7001DDBDA /* CCInputEvent.cpp in Sources */,
 				DC7CE719174CB2D200FCC9F7 /* Menu.cpp in Sources */,
-				DCAB2CF9174F1D14008CA814 /* Box2DTrial.cpp in Sources */,
 				DCAB2DED174F1EC9008CA814 /* b2BroadPhase.cpp in Sources */,
 				DCAB2DEE174F1EC9008CA814 /* b2CollideCircle.cpp in Sources */,
 				DCAB2DEF174F1EC9008CA814 /* b2CollidePolygon.cpp in Sources */,
@@ -2857,6 +2963,9 @@
 				DCAB2E0D174F1EC9008CA814 /* b2PulleyJoint.cpp in Sources */,
 				DCAB2E0E174F1EC9008CA814 /* b2RevoluteJoint.cpp in Sources */,
 				DCAB2E0F174F1EC9008CA814 /* b2WeldJoint.cpp in Sources */,
+				DCF4CF9C175445BB00516FB1 /* Box2DWorld.cpp in Sources */,
+				DCF4CF9F1754496D00516FB1 /* Box2DImport.cpp in Sources */,
+				DCF4CFB117548CDF00516FB1 /* RPGTileMap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2947,6 +3056,7 @@
 					"“$(SRCROOT)/../../box2d”",
 				);
 				INFOPLIST_FILE = Cocos2Dx/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Cocos2Dx/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -2957,6 +3067,7 @@
 					"-lsqlite3",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"Cocos2Dx/libs/Chipmunk/include/chipmunk\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2983,6 +3094,7 @@
 					"“$(SRCROOT)/../../box2d”",
 				);
 				INFOPLIST_FILE = Cocos2Dx/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Cocos2Dx/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -2993,6 +3105,7 @@
 					"-lsqlite3",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"Cocos2Dx/libs/Chipmunk/include/chipmunk\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
