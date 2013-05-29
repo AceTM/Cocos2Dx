@@ -401,6 +401,21 @@
 		DCF4D04C1754A5CC00516FB1 /* VILFLR.bmp in Resources */ = {isa = PBXBuildFile; fileRef = DCF4D02B1754A5CC00516FB1 /* VILFLR.bmp */; };
 		DCF4D04D1754A5CC00516FB1 /* VILINT.bmp in Resources */ = {isa = PBXBuildFile; fileRef = DCF4D02C1754A5CC00516FB1 /* VILINT.bmp */; };
 		DCF4D04E1754A5CC00516FB1 /* VILSHD.bmp in Resources */ = {isa = PBXBuildFile; fileRef = DCF4D02D1754A5CC00516FB1 /* VILSHD.bmp */; };
+		DCF4D0501754B6E700516FB1 /* Wallpaper.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF4D04F1754B6E700516FB1 /* Wallpaper.png */; };
+		DCF5D43B1755A65300F69021 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4311755A65300F69021 /* README.md */; };
+		DCF5D43C1755A65300F69021 /* SneakyButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4321755A65300F69021 /* SneakyButton.cpp */; };
+		DCF5D43D1755A65300F69021 /* SneakyButtonSkinnedBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4341755A65300F69021 /* SneakyButtonSkinnedBase.cpp */; };
+		DCF5D43E1755A65300F69021 /* SneakyJoystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4361755A65300F69021 /* SneakyJoystick.cpp */; };
+		DCF5D43F1755A65300F69021 /* SneakyJoystickSkinnedBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4381755A65300F69021 /* SneakyJoystickSkinnedBase.cpp */; };
+		DCF5D4421755A6EF00F69021 /* VirtualInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4401755A6EF00F69021 /* VirtualInput.cpp */; };
+		DCF5D44D1755B45C00F69021 /* ButtonBlueNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4441755B45C00F69021 /* ButtonBlueNormal.png */; };
+		DCF5D44E1755B45C00F69021 /* ButtonBluePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4451755B45C00F69021 /* ButtonBluePressed.png */; };
+		DCF5D44F1755B45C00F69021 /* ButtonGreenNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4461755B45C00F69021 /* ButtonGreenNormal.png */; };
+		DCF5D4501755B45C00F69021 /* ButtonGreenPressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4471755B45C00F69021 /* ButtonGreenPressed.png */; };
+		DCF5D4511755B45C00F69021 /* ButtonRedNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4481755B45C00F69021 /* ButtonRedNormal.png */; };
+		DCF5D4521755B45C00F69021 /* ButtonRedPress.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4491755B45C00F69021 /* ButtonRedPress.png */; };
+		DCF5D4531755B45C00F69021 /* JoystickRing.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D44A1755B45C00F69021 /* JoystickRing.png */; };
+		DCF5D4551755B45C00F69021 /* JoystickThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D44C1755B45C00F69021 /* JoystickThumb.png */; };
 		DCF5F1B5174F001C00765B52 /* Background 320x480.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5F1B4174F001C00765B52 /* Background 320x480.png */; };
 /* End PBXBuildFile section */
 
@@ -1150,6 +1165,26 @@
 		DCF4D02B1754A5CC00516FB1 /* VILFLR.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = VILFLR.bmp; sourceTree = "<group>"; };
 		DCF4D02C1754A5CC00516FB1 /* VILINT.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = VILINT.bmp; sourceTree = "<group>"; };
 		DCF4D02D1754A5CC00516FB1 /* VILSHD.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = VILSHD.bmp; sourceTree = "<group>"; };
+		DCF4D04F1754B6E700516FB1 /* Wallpaper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Wallpaper.png; sourceTree = "<group>"; };
+		DCF5D4311755A65300F69021 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		DCF5D4321755A65300F69021 /* SneakyButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SneakyButton.cpp; sourceTree = "<group>"; };
+		DCF5D4331755A65300F69021 /* SneakyButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButton.h; sourceTree = "<group>"; };
+		DCF5D4341755A65300F69021 /* SneakyButtonSkinnedBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SneakyButtonSkinnedBase.cpp; sourceTree = "<group>"; };
+		DCF5D4351755A65300F69021 /* SneakyButtonSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyButtonSkinnedBase.h; sourceTree = "<group>"; };
+		DCF5D4361755A65300F69021 /* SneakyJoystick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SneakyJoystick.cpp; sourceTree = "<group>"; };
+		DCF5D4371755A65300F69021 /* SneakyJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystick.h; sourceTree = "<group>"; };
+		DCF5D4381755A65300F69021 /* SneakyJoystickSkinnedBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SneakyJoystickSkinnedBase.cpp; sourceTree = "<group>"; };
+		DCF5D4391755A65300F69021 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
+		DCF5D4401755A6EF00F69021 /* VirtualInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VirtualInput.cpp; sourceTree = "<group>"; };
+		DCF5D4411755A6EF00F69021 /* VirtualInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualInput.h; sourceTree = "<group>"; };
+		DCF5D4441755B45C00F69021 /* ButtonBlueNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBlueNormal.png; sourceTree = "<group>"; };
+		DCF5D4451755B45C00F69021 /* ButtonBluePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBluePressed.png; sourceTree = "<group>"; };
+		DCF5D4461755B45C00F69021 /* ButtonGreenNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonGreenNormal.png; sourceTree = "<group>"; };
+		DCF5D4471755B45C00F69021 /* ButtonGreenPressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonGreenPressed.png; sourceTree = "<group>"; };
+		DCF5D4481755B45C00F69021 /* ButtonRedNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRedNormal.png; sourceTree = "<group>"; };
+		DCF5D4491755B45C00F69021 /* ButtonRedPress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonRedPress.png; sourceTree = "<group>"; };
+		DCF5D44A1755B45C00F69021 /* JoystickRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JoystickRing.png; sourceTree = "<group>"; };
+		DCF5D44C1755B45C00F69021 /* JoystickThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JoystickThumb.png; sourceTree = "<group>"; };
 		DCF5F1B4174F001C00765B52 /* Background 320x480.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background 320x480.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1222,6 +1257,7 @@
 		DC12FB781744D21400480D31 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DCF5D4431755B45C00F69021 /* Joystick */,
 				DCF4D00B1754A5CC00516FB1 /* Tiles */,
 				DCF4CFA917548BCF00516FB1 /* Tilesets */,
 				DCF4CFA017544E9200516FB1 /* Import */,
@@ -1964,6 +2000,7 @@
 		DC12FD951744D22700480D31 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DCF5D42F1755A65300F69021 /* SneakyInput */,
 				DCC1667517463591001DDBDA /* Darkfall */,
 				DC12FDE71744D22900480D31 /* cocos-ext.h */,
 				DC12FDE81744D22900480D31 /* ExtensionMacros.h */,
@@ -2326,6 +2363,8 @@
 				DCF4CF9B175445BB00516FB1 /* Box2DWorld.h */,
 				DCF4CFAF17548CDF00516FB1 /* RPGTileMap.cpp */,
 				DCF4CFB017548CDF00516FB1 /* RPGTileMap.h */,
+				DCF5D4401755A6EF00F69021 /* VirtualInput.cpp */,
+				DCF5D4411755A6EF00F69021 /* VirtualInput.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -2536,6 +2575,7 @@
 		DCC1669817463A4D001DDBDA /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				DCF4D04F1754B6E700516FB1 /* Wallpaper.png */,
 				DCF5F1B4174F001C00765B52 /* Background 320x480.png */,
 				DC7CE72B174CDCFC00FCC9F7 /* netBackground2.png */,
 				DC7CE729174CDC4500FCC9F7 /* netBackground.png */,
@@ -2667,6 +2707,37 @@
 				DCF4D02D1754A5CC00516FB1 /* VILSHD.bmp */,
 			);
 			path = "2D Circle Graphic";
+			sourceTree = "<group>";
+		};
+		DCF5D42F1755A65300F69021 /* SneakyInput */ = {
+			isa = PBXGroup;
+			children = (
+				DCF5D4311755A65300F69021 /* README.md */,
+				DCF5D4321755A65300F69021 /* SneakyButton.cpp */,
+				DCF5D4331755A65300F69021 /* SneakyButton.h */,
+				DCF5D4341755A65300F69021 /* SneakyButtonSkinnedBase.cpp */,
+				DCF5D4351755A65300F69021 /* SneakyButtonSkinnedBase.h */,
+				DCF5D4361755A65300F69021 /* SneakyJoystick.cpp */,
+				DCF5D4371755A65300F69021 /* SneakyJoystick.h */,
+				DCF5D4381755A65300F69021 /* SneakyJoystickSkinnedBase.cpp */,
+				DCF5D4391755A65300F69021 /* SneakyJoystickSkinnedBase.h */,
+			);
+			path = SneakyInput;
+			sourceTree = "<group>";
+		};
+		DCF5D4431755B45C00F69021 /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				DCF5D4441755B45C00F69021 /* ButtonBlueNormal.png */,
+				DCF5D4451755B45C00F69021 /* ButtonBluePressed.png */,
+				DCF5D4461755B45C00F69021 /* ButtonGreenNormal.png */,
+				DCF5D4471755B45C00F69021 /* ButtonGreenPressed.png */,
+				DCF5D4481755B45C00F69021 /* ButtonRedNormal.png */,
+				DCF5D4491755B45C00F69021 /* ButtonRedPress.png */,
+				DCF5D44A1755B45C00F69021 /* JoystickRing.png */,
+				DCF5D44C1755B45C00F69021 /* JoystickThumb.png */,
+			);
+			path = Joystick;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2825,6 +2896,16 @@
 				DCF4D04C1754A5CC00516FB1 /* VILFLR.bmp in Resources */,
 				DCF4D04D1754A5CC00516FB1 /* VILINT.bmp in Resources */,
 				DCF4D04E1754A5CC00516FB1 /* VILSHD.bmp in Resources */,
+				DCF4D0501754B6E700516FB1 /* Wallpaper.png in Resources */,
+				DCF5D43B1755A65300F69021 /* README.md in Resources */,
+				DCF5D44D1755B45C00F69021 /* ButtonBlueNormal.png in Resources */,
+				DCF5D44E1755B45C00F69021 /* ButtonBluePressed.png in Resources */,
+				DCF5D44F1755B45C00F69021 /* ButtonGreenNormal.png in Resources */,
+				DCF5D4501755B45C00F69021 /* ButtonGreenPressed.png in Resources */,
+				DCF5D4511755B45C00F69021 /* ButtonRedNormal.png in Resources */,
+				DCF5D4521755B45C00F69021 /* ButtonRedPress.png in Resources */,
+				DCF5D4531755B45C00F69021 /* JoystickRing.png in Resources */,
+				DCF5D4551755B45C00F69021 /* JoystickThumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3114,6 +3195,11 @@
 				DCF4CF9C175445BB00516FB1 /* Box2DWorld.cpp in Sources */,
 				DCF4CF9F1754496D00516FB1 /* Box2DImport.cpp in Sources */,
 				DCF4CFB117548CDF00516FB1 /* RPGTileMap.cpp in Sources */,
+				DCF5D43C1755A65300F69021 /* SneakyButton.cpp in Sources */,
+				DCF5D43D1755A65300F69021 /* SneakyButtonSkinnedBase.cpp in Sources */,
+				DCF5D43E1755A65300F69021 /* SneakyJoystick.cpp in Sources */,
+				DCF5D43F1755A65300F69021 /* SneakyJoystickSkinnedBase.cpp in Sources */,
+				DCF5D4421755A6EF00F69021 /* VirtualInput.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
