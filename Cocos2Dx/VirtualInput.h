@@ -1,37 +1,26 @@
 //
-//  RPGTileMap.h
+//  VirtualInput.h
 //  Cocos2Dx
 //
-//  Created by MinhNT on 13/05/28.
+//  Created by MinhNT on 13/05/29.
 //
 //
 
-#ifndef __Cocos2Dx__RPGTileMap__
-#define __Cocos2Dx__RPGTileMap__
+#ifndef __Cocos2Dx__VirtualInput__
+#define __Cocos2Dx__VirtualInput__
 
 #include <iostream>
 #include "cocos2d.h"
 #include "CCInputListener.h"
 #include "SneakyJoystick.h"
 #include "SneakyButton.h"
-#include "SneakyJoystickSkinnedBase.h"
-#include "SneakyButtonSkinnedBase.h"
 
 USING_NS_CC;
 
-class TileMap : public CCLayer {
+class VirtualInput : public CCLayer, public CCInputListener {
 private:
     SneakyJoystick *leftJoystick;
     SneakyButton *accelButton;
-    
-    SneakyJoystickSkinnedBase *joystickBase;
-    SneakyJoystick *joystick;
-    
-    SneakyButtonSkinnedBase *buttonBase;
-    SneakyButton *button;
-    
-    CCTMXTiledMap *tileMap;
-    CCCamera *camera;
 public:
     virtual bool init();
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
@@ -42,7 +31,7 @@ public:
     void menuCloseCallback(CCObject *pSender);
     
     static CCScene* scene();
-    CREATE_FUNC(TileMap);
+    CREATE_FUNC(VirtualInput);
 };
 
-#endif /* defined(__Cocos2Dx__RPGTileMap__) */
+#endif /* defined(__Cocos2Dx__VirtualInput__) */
