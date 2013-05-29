@@ -69,7 +69,7 @@ bool TileMap::init() {
     accelButton = buttonBase->getButton();
     this->addChild(buttonBase, 1, 1);
     
-    CCSprite *wallSprite = CCSprite::create("Wallpaper.png");
+    wallSprite = CCSprite::create("Wallpaper.png");
     wallSprite->setPosition(ccp(160, 240));
     this->addChild(wallSprite, 0, 0);
     this->scheduleUpdate();
@@ -78,7 +78,9 @@ bool TileMap::init() {
 
 void TileMap::update(float dt) {
     CCPoint velo = leftJoystick->getVelocity();
-    CCLog("Log: x%f, y%f", velo.x, velo.y);
+    if (velo.x != 0 || velo.y != 0) {
+        wallSprite->setPosition(ccp(wallSprite->getPositionX() + (-velo.x) , wallSprite->getPositionY() + (-velo.y)));
+    }
 }
 
 bool TileMap::ccTouchBegan(CCTouch *touch, CCEvent *event) {
