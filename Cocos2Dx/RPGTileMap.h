@@ -19,7 +19,7 @@
 
 USING_NS_CC;
 
-class TileMap : public CCLayer, public CCInputListener {
+class TileMap : public CCLayer {
 private:
     SneakyJoystick *leftJoystick;
     SneakyButton *accelButton;
@@ -34,7 +34,6 @@ private:
     CCCamera *camera;
 public:
     virtual bool init();
-    virtual void tick(float delta);
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
     virtual void ccTouchEnded(CCTouch *touch, CCEvent *event);
     
