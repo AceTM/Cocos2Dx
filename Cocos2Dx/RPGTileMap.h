@@ -11,14 +11,27 @@
 
 #include <iostream>
 #include "cocos2d.h"
-#include "CCParallaxNodeExtra.h"
 #include "CCInputListener.h"
+#include "SneakyJoystick.h"
+#include "SneakyButton.h"
+#include "SneakyJoystickSkinnedBase.h"
+#include "SneakyButtonSkinnedBase.h"
 
 USING_NS_CC;
 
-class TileMap : public CCLayer, public CCInputListener {
+class TileMap : public CCLayer {
 private:
+    SneakyJoystick *leftJoystick;
+    SneakyButton *accelButton;
+    
+    SneakyJoystickSkinnedBase *joystickBase;
+    SneakyJoystick *joystick;
+    
+    SneakyButtonSkinnedBase *buttonBase;
+    SneakyButton *button;
+    
     CCTMXTiledMap *tileMap;
+    CCCamera *camera;
 public:
     virtual bool init();
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
