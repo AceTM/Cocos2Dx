@@ -357,7 +357,6 @@
 		DCC166C217463A4D001DDBDA /* Sprites.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCC166AF17463A4D001DDBDA /* Sprites.pvr.ccz */; };
 		DCD45571174DE788001A7DD6 /* hit.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCD4556F174DE788001A7DD6 /* hit.plist */; };
 		DCD45572174DE788001A7DD6 /* hit.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCD45570174DE788001A7DD6 /* hit.pvr.ccz */; };
-		DCF4CF9C175445BB00516FB1 /* Box2DWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4CF9A175445BB00516FB1 /* Box2DWorld.cpp */; };
 		DCF4CF9F1754496D00516FB1 /* Box2DImport.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF4CF9D1754496D00516FB1 /* Box2DImport.cpp */; };
 		DCF4CFA417544E9200516FB1 /* baseSprite.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFA117544E9200516FB1 /* baseSprite.plist */; };
 		DCF4CFA517544E9200516FB1 /* baseSprite.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = DCF4CFA217544E9200516FB1 /* baseSprite.pvr.ccz */; };
@@ -407,7 +406,6 @@
 		DCF5D43D1755A65300F69021 /* SneakyButtonSkinnedBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4341755A65300F69021 /* SneakyButtonSkinnedBase.cpp */; };
 		DCF5D43E1755A65300F69021 /* SneakyJoystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4361755A65300F69021 /* SneakyJoystick.cpp */; };
 		DCF5D43F1755A65300F69021 /* SneakyJoystickSkinnedBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4381755A65300F69021 /* SneakyJoystickSkinnedBase.cpp */; };
-		DCF5D4421755A6EF00F69021 /* VirtualInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF5D4401755A6EF00F69021 /* VirtualInput.cpp */; };
 		DCF5D44D1755B45C00F69021 /* ButtonBlueNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4441755B45C00F69021 /* ButtonBlueNormal.png */; };
 		DCF5D44E1755B45C00F69021 /* ButtonBluePressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4451755B45C00F69021 /* ButtonBluePressed.png */; };
 		DCF5D44F1755B45C00F69021 /* ButtonGreenNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = DCF5D4461755B45C00F69021 /* ButtonGreenNormal.png */; };
@@ -1118,8 +1116,6 @@
 		DCC166AF17463A4D001DDBDA /* Sprites.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sprites.pvr.ccz; sourceTree = "<group>"; };
 		DCD4556F174DE788001A7DD6 /* hit.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = hit.plist; sourceTree = "<group>"; };
 		DCD45570174DE788001A7DD6 /* hit.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = hit.pvr.ccz; sourceTree = "<group>"; };
-		DCF4CF9A175445BB00516FB1 /* Box2DWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box2DWorld.cpp; sourceTree = "<group>"; };
-		DCF4CF9B175445BB00516FB1 /* Box2DWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2DWorld.h; sourceTree = "<group>"; };
 		DCF4CF9D1754496D00516FB1 /* Box2DImport.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Box2DImport.cpp; sourceTree = "<group>"; };
 		DCF4CF9E1754496D00516FB1 /* Box2DImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Box2DImport.h; sourceTree = "<group>"; };
 		DCF4CFA117544E9200516FB1 /* baseSprite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = baseSprite.plist; sourceTree = "<group>"; };
@@ -1175,8 +1171,6 @@
 		DCF5D4371755A65300F69021 /* SneakyJoystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystick.h; sourceTree = "<group>"; };
 		DCF5D4381755A65300F69021 /* SneakyJoystickSkinnedBase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SneakyJoystickSkinnedBase.cpp; sourceTree = "<group>"; };
 		DCF5D4391755A65300F69021 /* SneakyJoystickSkinnedBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SneakyJoystickSkinnedBase.h; sourceTree = "<group>"; };
-		DCF5D4401755A6EF00F69021 /* VirtualInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VirtualInput.cpp; sourceTree = "<group>"; };
-		DCF5D4411755A6EF00F69021 /* VirtualInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualInput.h; sourceTree = "<group>"; };
 		DCF5D4441755B45C00F69021 /* ButtonBlueNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBlueNormal.png; sourceTree = "<group>"; };
 		DCF5D4451755B45C00F69021 /* ButtonBluePressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBluePressed.png; sourceTree = "<group>"; };
 		DCF5D4461755B45C00F69021 /* ButtonGreenNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonGreenNormal.png; sourceTree = "<group>"; };
@@ -2359,12 +2353,8 @@
 				DC12FEDE1744D22E00480D31 /* HelloWorldScene.cpp */,
 				DC7CE717174CB2D200FCC9F7 /* Menu.cpp */,
 				DC7CE718174CB2D200FCC9F7 /* Menu.h */,
-				DCF4CF9A175445BB00516FB1 /* Box2DWorld.cpp */,
-				DCF4CF9B175445BB00516FB1 /* Box2DWorld.h */,
 				DCF4CFAF17548CDF00516FB1 /* RPGTileMap.cpp */,
 				DCF4CFB017548CDF00516FB1 /* RPGTileMap.h */,
-				DCF5D4401755A6EF00F69021 /* VirtualInput.cpp */,
-				DCF5D4411755A6EF00F69021 /* VirtualInput.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -3192,14 +3182,12 @@
 				DCAB2E0D174F1EC9008CA814 /* b2PulleyJoint.cpp in Sources */,
 				DCAB2E0E174F1EC9008CA814 /* b2RevoluteJoint.cpp in Sources */,
 				DCAB2E0F174F1EC9008CA814 /* b2WeldJoint.cpp in Sources */,
-				DCF4CF9C175445BB00516FB1 /* Box2DWorld.cpp in Sources */,
 				DCF4CF9F1754496D00516FB1 /* Box2DImport.cpp in Sources */,
 				DCF4CFB117548CDF00516FB1 /* RPGTileMap.cpp in Sources */,
 				DCF5D43C1755A65300F69021 /* SneakyButton.cpp in Sources */,
 				DCF5D43D1755A65300F69021 /* SneakyButtonSkinnedBase.cpp in Sources */,
 				DCF5D43E1755A65300F69021 /* SneakyJoystick.cpp in Sources */,
 				DCF5D43F1755A65300F69021 /* SneakyJoystickSkinnedBase.cpp in Sources */,
-				DCF5D4421755A6EF00F69021 /* VirtualInput.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

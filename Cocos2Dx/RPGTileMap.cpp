@@ -32,6 +32,7 @@ CCScene* TileMap::scene() {
 }
 
 bool TileMap::init() {
+    if (!CCLayer::init())return false;
 //    tileMap = CCTMXTiledMap::create("Grass.tmx");
 //    this->addChild(tileMap, 0, 0);
 //    
@@ -54,7 +55,7 @@ bool TileMap::init() {
     joystickBase->setJoystick(joystick);
     joystickBase->setPosition(ccp(winSize.width * 0.7, winSize.height * 0.3));
     leftJoystick = joystickBase->getJoystick();
-    this->addChild(joystickBase);
+    this->addChild(joystickBase, 1, 2);
     
     CCRect buttonRect;
     buttonBase = SneakyButtonSkinnedBase::create();
@@ -66,24 +67,18 @@ bool TileMap::init() {
     buttonBase->setButton(button);
     buttonBase->setPosition(ccp(winSize.width * 0.3, winSize.height * 0.3));
     accelButton = buttonBase->getButton();
-    this->addChild(buttonBase);
-    
-    return true;
+    this->addChild(buttonBase, 1, 1);
     
     CCSprite *wallSprite = CCSprite::create("Wallpaper.png");
-    wallSprite->setPosition(ccp(0, 0));
-    wallSprite->setScale(0.5);
+    wallSprite->setPosition(ccp(160, 240));
     this->addChild(wallSprite, 0, 0);
-    CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
+    this->scheduleUpdate();
     return true;
-}
-
-void TileMap::tick(float delta) {
-
 }
 
 void TileMap::update(float dt) {
-    
+    CCPoint velo = leftJoystick->getVelocity();
+    CCLog("Log: x%f, y%f", velo.x, velo.y);
 }
 
 bool TileMap::ccTouchBegan(CCTouch *touch, CCEvent *event) {
