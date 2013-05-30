@@ -32,6 +32,8 @@ private:
     
     CCTMXTiledMap *tileMap;
     CCCamera *camera;
+    CCSprite *wallSprite;
+    CCSprite *player;
 public:
     virtual bool init();
     virtual bool ccTouchBegan(CCTouch *touch, CCEvent *event);
