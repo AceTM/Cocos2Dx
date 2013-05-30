@@ -18,16 +18,9 @@ using namespace cocos2d;
 using namespace CocosDenshion;
 
 CCScene* TileMap::scene() {
-    // 'scene' is an autorelease object
     cocos2d::CCScene *scene = CCScene::create();
-    
-    // 'layer' is an autorelease object
     TileMap *layer = TileMap::create();
-    
-    // add layer as a child to scene
     scene->addChild(layer);
-    
-    // return the scene
     return scene;
 }
 
@@ -53,7 +46,7 @@ bool TileMap::init() {
     joystickBase->setBackgroundSprite(CCSprite::create("JoystickRing.png"));
     joystickBase->setThumbSprite(CCSprite::create("JoystickThumb.png"));
     joystickBase->setJoystick(joystick);
-    joystickBase->setPosition(ccp(winSize.width * 0.7, winSize.height * 0.3));
+    joystickBase->setPosition(ccp(winSize.width * 0.8, winSize.height * 0.15));
     leftJoystick = joystickBase->getJoystick();
     this->addChild(joystickBase, 1, 2);
     
@@ -65,20 +58,37 @@ bool TileMap::init() {
     buttonBase->setActivatedSprite(CCSprite::create("ButtonRedPress.png"));
     buttonBase->setPressSprite(CCSprite::create("ButtonRedPress.png"));
     buttonBase->setButton(button);
-    buttonBase->setPosition(ccp(winSize.width * 0.3, winSize.height * 0.3));
+    buttonBase->setPosition(ccp(winSize.width * 0.1, winSize.height * 0.1));
     accelButton = buttonBase->getButton();
     this->addChild(buttonBase, 1, 1);
     
-    CCSprite *wallSprite = CCSprite::create("Wallpaper.png");
+    wallSprite = CCSprite::create("Wallpaper.png");
     wallSprite->setPosition(ccp(160, 240));
+    
+    player = CCSprite::create("Icon.png");
+    player->setPosition(ccp(winSize.height/2, winSize.width/2));
     this->addChild(wallSprite, 0, 0);
+    this->addChild(player, 2, 3);
     this->scheduleUpdate();
+    
+    
     return true;
 }
 
 void TileMap::update(float dt) {
     CCPoint velo = leftJoystick->getVelocity();
-    CCLog("Log: x%f, y%f", velo.x, velo.y);
+    if (velo.x != 0 || velo.y != 0) {
+        player->setPosition(ccp(player->getPositionX() + (velo.x) , player->getPositionY() + (velo.y)));
+    }
+    if (accelButton->getIsActive() == true) {
+//        this->getCamera()->setCenterXYZ(0, 45, 90);
+//        this->getCamera()->setEyeXYZ(0, 0, 0);
+//        this->getCamera()->setUpXYZ(0, 1, 0);
+        CCLog("ZEye: %f", this->getCamera()->getZEye());
+        this->getCamera()->restore();
+       
+    }
+    
 }
 
 bool TileMap::ccTouchBegan(CCTouch *touch, CCEvent *event) {
